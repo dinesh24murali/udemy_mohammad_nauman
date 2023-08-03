@@ -1,0 +1,427 @@
+<!DOCTYPE html><html><head>
+      <title>setup</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/nam/.vscode-insiders/extensions/shd101wyy.markdown-preview-enhanced-0.5.18/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      pre{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;padding:1em;margin:.5em 0;overflow:auto;line-height:1.5;tab-size:4;hyphens:none;color:#abb2bf;background-color:#31363f !important;border:#4b5362;border-radius:3px}pre[class*="language-"]{padding:1em}code[class*="language-"] .token.comment,pre[class*="language-"] .token.comment,code[class*="language-"] .token.prolog,pre[class*="language-"] .token.prolog,code[class*="language-"] .token.doctype,pre[class*="language-"] .token.doctype,code[class*="language-"] .token.cdata,pre[class*="language-"] .token.cdata{color:#5c6370}code[class*="language-"] .namespace,pre[class*="language-"] .namespace{opacity:.7}code[class*="language-"] .token.constant,pre[class*="language-"] .token.constant{color:#d19a66}code[class*="language-"] .token.boolean,pre[class*="language-"] .token.boolean,code[class*="language-"] .token.number,pre[class*="language-"] .token.number,code[class*="language-"] .token.function-name,pre[class*="language-"] .token.function-name{color:#d19a66}code[class*="language-"] .token.tag,pre[class*="language-"] .token.tag{color:#e06c75}code[class*="language-"] .token.symbol,pre[class*="language-"] .token.symbol{color:#56b6c2}code[class*="language-"] .token.selector,pre[class*="language-"] .token.selector{color:#c678dd}code[class*="language-"] .token.attr-name,pre[class*="language-"] .token.attr-name{color:#d19a66}code[class*="language-"] .token.string,pre[class*="language-"] .token.string{color:#98c379}code[class*="language-"] .token.char,pre[class*="language-"] .token.char{color:#56b6c2}code[class*="language-"] .token.url,pre[class*="language-"] .token.url{color:#56b6c2}code[class*="language-"] .token.operator,pre[class*="language-"] .token.operator{color:#abb2bf}code[class*="language-"] .token.atrule,pre[class*="language-"] .token.atrule,code[class*="language-"] .token.attr-value,pre[class*="language-"] .token.attr-value,code[class*="language-"] .token.keyword,pre[class*="language-"] .token.keyword{color:#c678dd}code[class*="language-"] .token.function,pre[class*="language-"] .token.function{color:#61afef}code[class*="language-"] .token.class-name,pre[class*="language-"] .token.class-name{color:#e5c07b}code[class*="language-"] .token.variable,pre[class*="language-"] .token.variable{color:#d19a66}code[class*="language-"] .token.regex,pre[class*="language-"] .token.regex{color:#56b6c2}code[class*="language-"] .token.important,pre[class*="language-"] .token.important{color:#e06c75}code[class*="language-"] .token.important,pre[class*="language-"] .token.important,code[class*="language-"] .token.bold,pre[class*="language-"] .token.bold{font-weight:bold}code[class*="language-"] .token.italic,pre[class*="language-"] .token.italic{font-style:italic}code[class*="language-"] .token.entity,pre[class*="language-"] .token.entity{cursor:help}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:hsl(220,14%,71%);background-color:hsl(220,13%,18%);overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:hsl(0,0%,100%)}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:hsl(220,14%,55%)}html body strong{color:hsl(0,0%,100%)}html body del{color:hsl(220,14%,55%)}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#56b6c2;text-decoration:none}html body a:hover{color:#74c3cd;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:hsl(220,14%,55%);background-color:hsl(220,13%,26%);border-left:4px solid hsl(220,13%,34%)}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:hsl(220,13%,34%);border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:hsl(0,0%,100%)}html body table td,html body table th{border:1px solid hsl(220,13%,34%);padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:hsl(0,0%,100%);background-color:hsl(220,13%,26%);border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:hsl(220,13%,34%);border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:hsl(0,0%,100%);border:1px solid hsl(220,13%,34%);border-bottom:2px solid hsl(220,13%,28%);padding:2px 4px;background-color:hsl(220,13%,26%);border-radius:3px}@media print{html body{background-color:hsl(220,13%,18%)}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:hsl(0,0%,100%);page-break-after:avoid}html body blockquote{color:hsl(220,14%,55%)}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: 'Fira Sans';
+  line-height: 1.6;
+}
+.markdown-preview.markdown-preview h1 {
+  border-bottom: 1px dashed gray;
+  margin-bottom: 0.7em;
+}
+.markdown-preview.markdown-preview h2 {
+  border-bottom: 1px dashed gray;
+  margin-top: 1.5em;
+}
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="hyperledger-fabric-23-setup">Hyperledger Fabric 2.3+ Setup</h1>
+
+<p>Make sure you are using the <code>bash</code> shell. If you are using <code>fish</code> or <code>zsh</code>, just enter the following command to enter the bash shell.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">bash</span>
+</pre><h2 class="mume-header" id="setting-up-the-environment">Setting up the Environment</h2>
+
+<p>Let&#x2019;s first go ahead and setup docker and some prerequisites.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span> <span class="token function">curl</span> jq 
+<span class="token function">sudo</span> <span class="token function">apt-get</span> -y <span class="token function">install</span> docker-compose
+docker --version 
+<span class="token function">sudo</span> systemctl start docker
+<span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> docker 
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$USER</span>    <span class="token comment"># ensure your username shows here </span>
+<span class="token function">sudo</span> <span class="token function">usermod</span> -a -G docker <span class="token environment constant">$USER</span> 
+</pre><p>Make sure you log out and log back in to ensure correct permissions are set for your user. Otherwise, docker gives errors.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">docker <span class="token function">ps</span> 
+</pre><p>If that works correctly i.e. does not throw any errors, you may proceed. Otherwise, first setup the permissions through <code>usermod</code> above.</p>
+<p>Let&#x2019;s now setup node. The latest supported version currently is 12. Future versions should be usable and will be mentioned on the Fabric site.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">curl</span> -fsSL https://deb.nodesource.com/setup_12.x <span class="token operator">|</span> <span class="token function">sudo</span> -E <span class="token function">bash</span> - 
+<span class="token function">sudo</span> <span class="token function">apt</span> update 
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y nodejs  
+</pre><p>Ensure that correct versions of Node and NPM are installed:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">npm</span>  --version    <span class="token comment"># shouled be 6.x </span>
+node --version    <span class="token comment"># should be 12.x </span>
+</pre><h2 class="mume-header" id="downloading-and-installing-fabric-binaries">Downloading and Installing Fabric Binaries</h2>
+
+<p>Setting up Fabric is now extremely straight-forward using the procided <code>test-net</code> scripts. Let&#x2019;s first create a fabric directory to ensure everything remains in one place.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">mkdir</span> ~/fabric 
+<span class="token builtin class-name">cd</span> fabric 
+</pre><p>Let&#x2019;s download the Fabric binaries in this folder.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">curl</span> -sSL https://bit.ly/2ysbOFE <span class="token operator">|</span> <span class="token function">bash</span> -s -- <span class="token number">2.3</span>.1 
+</pre><p>This will clone the repo and setup docker images using Docker Compose. I strongly recommend you read through all the outputs.</p>
+<h2 class="mume-header" id="setup-the-test-network">Setup the Test Network</h2>
+
+<p>First, create a channel on which our chaincode (or smart contract) will be deployed:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">cd</span> fabric-samples/test-network 
+./network.sh up createChannel -c channel1 -ca  
+</pre><p>Verify that new containers are indeed up.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">docker <span class="token function">ps</span> 
+</pre><p>Now let&#x2019;s create a package for our chaincode. First, set up the dependencies and then create a package.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/asset-transfer-basic/chaincode-javascript 
+<span class="token function">npm</span> <span class="token function">install</span>  
+</pre><p>Make sure everythingn installed correctly and without any errors.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/<span class="token punctuation">..</span>/test-network 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">FABRIC_CFG_PATH</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/<span class="token punctuation">..</span>/config/ 
+<span class="token builtin class-name">echo</span> <span class="token variable">$FABRIC_CFG_PATH</span> 
+</pre><p>Now, we must make sure that fabric commands are in the PATH. The following commands adds it to the current session but you should add it to your <code>~/.bashrc</code> file as well for future use.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>peer   # ensure it&apos;s there. If not, set the path 
+export PATH=$PATH:/home/nam/fabric/fabric-samples/bin/ 
+peer   # should work now 
+</code></pre><p>Now, let&#x2019;s create a pacakge from our chaincode source.</p>
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="bash"><div class="input-div"><pre data-role="codeBlock" data-info="bash {code_chunk_offset=0, cmd=true}" class="language-bash">peer lifecycle chaincode package basic.tar.gz <span class="token punctuation">\</span>
+      --path <span class="token punctuation">..</span>/asset-transfer-basic/chaincode-javascript <span class="token punctuation">\</span>
+      --lang node <span class="token punctuation">\</span>
+      --label basic_1.0
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>Let&#x2019;s set the environment variables needed through the provided script.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">source</span> ./scripts/envVar.sh 
+</pre><h2 class="mume-header" id="installing-the-chaincode-to-channel">Installing the Chaincode to Channel</h2>
+
+<pre data-role="codeBlock" data-info="bash" class="language-bash">setGlobals <span class="token number">1</span> 
+</pre><p>This selects the first organization. Now we can go ahead and install the chaincode on the channel. First let&#x2019;s save the certificate file locations for both organizations and the orderer.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># the $PWD is necessary as the commands need absolute paths, relatives don&apos;t work </span>
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORDERER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORG1_PEER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORG2_PEER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+</pre><p>First, install the package.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer lifecycle chaincode <span class="token function">install</span> basic.tar.gz 
+</pre><p>Then, do the same for Organization 2.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">setGlobals <span class="token number">2</span>
+peer lifecycle chaincode <span class="token function">install</span> basic.tar.gz 
+
+setGlobals <span class="token number">1</span>  <span class="token comment"># back to org1 </span>
+</pre><p>Take note of the Package ID given back. We need this to refer to the chaincode in later commands.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer lifecycle chaincode queryinstalled <span class="token punctuation">\</span>
+      --peerAddresses localhost:7051 <span class="token punctuation">\</span>
+      --tlsRootCertFiles <span class="token variable">$ORDERER_CERTFILE</span> 
+</pre><p>Using the output of the above command, set the package ID env variable. (It&#x2019;s ok if the queryinstalled one gives you an error. We can proceed without it.)</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># make sure you use the actual package ID and not copy/paste the one below </span>
+ 
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">PKGID</span><span class="token operator">=</span>basic_1.0-94c84bb2cc404bab2d945d62dc8d8d3837e2074966495d037b27ecfdf7fe171a
+</pre><p>Once we have that, we need to approve the chaincode definition for organizations.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer lifecycle chaincode approveformyorg <span class="token punctuation">\</span>
+      -o localhost:7050 <span class="token punctuation">\</span>
+      --ordererTLSHostnameOverride  orderer.example.com <span class="token punctuation">\</span>
+      --tls --cafile <span class="token variable">$ORDERER_CERTFILE</span>  <span class="token punctuation">\</span>
+      --channelID channel1 <span class="token punctuation">\</span>
+      --name basic <span class="token punctuation">\</span>
+      --version <span class="token number">1</span> <span class="token punctuation">\</span>
+      --package-id <span class="token variable">$PKGID</span> <span class="token punctuation">\</span>
+      --sequence <span class="token number">1</span>  
+</pre><p>And do the same for the second organization:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">setGlobals <span class="token number">2</span> 
+
+peer lifecycle chaincode approveformyorg <span class="token punctuation">\</span>
+      -o localhost:7050 <span class="token punctuation">\</span>
+      --ordererTLSHostnameOverride  orderer.example.com <span class="token punctuation">\</span>
+      --tls --cafile <span class="token variable">$ORDERER_CERTFILE</span>  <span class="token punctuation">\</span>
+      --channelID channel1 <span class="token punctuation">\</span>
+      --name basic <span class="token punctuation">\</span>
+      --version <span class="token number">1</span> <span class="token punctuation">\</span>
+      --package-id <span class="token variable">$PKGID</span> <span class="token punctuation">\</span>
+      --sequence <span class="token number">1</span>  
+</pre><p>Let&#x2019;s commit the chnages made to the chaincode. We have to specify peers here explicitly. When we later use the chaincode through our code, we will not have this issue.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer lifecycle chaincode commit <span class="token punctuation">\</span>
+      -o localhost:7050 <span class="token punctuation">\</span>
+      --ordererTLSHostnameOverride orderer.example.com <span class="token punctuation">\</span>
+      --tls --cafile <span class="token variable">$ORDERER_CERTFILE</span> <span class="token punctuation">\</span>
+      --channelID channel1 --name basic <span class="token punctuation">\</span>
+      --peerAddresses localhost:7051 --tlsRootCertFiles <span class="token variable">$ORG1_PEER_CERTFILE</span> <span class="token punctuation">\</span>
+      --peerAddresses localhost:9051 --tlsRootCertFiles <span class="token variable">$ORG2_PEER_CERTFILE</span> <span class="token punctuation">\</span>
+      --version <span class="token number">1</span> --sequence <span class="token number">1</span>  
+</pre><p>And confirm that it went through.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer lifecycle chaincode querycommitted <span class="token punctuation">\</span>
+      --channelID channel1 --name basic <span class="token punctuation">\</span>
+      --cafile  <span class="token variable">$ORDERER_CERTFILE</span>
+</pre><p>Finally, see <code>docker ps</code> to see chaincode containers running.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">docker <span class="token function">ps</span> 
+</pre><h2 class="mume-header" id="working-with-the-chaincode-through-cli">Working with the Chaincode through CLI</h2>
+
+<p>Let&#x2019;s first initialize our ledger. For this, we will call the <code>InitLedger</code> function that we defined in <code>chaincode-javascript</code> project. This can be done using the <code>invoke</code> subcommand.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer chaincode invoke <span class="token punctuation">\</span>
+      -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com <span class="token punctuation">\</span>
+      --tls --cafile <span class="token variable">$ORDERER_CERTFILE</span>  <span class="token punctuation">\</span>
+      -C channel1 -n basic <span class="token punctuation">\</span>
+      --peerAddresses localhost:7051 --tlsRootCertFiles <span class="token variable">$ORG1_PEER_CERTFILE</span> <span class="token punctuation">\</span>
+      --peerAddresses localhost:9051 --tlsRootCertFiles <span class="token variable">$ORG2_PEER_CERTFILE</span> <span class="token punctuation">\</span>
+      -c <span class="token string">&apos;{&quot;function&quot;: &quot;InitLedger&quot;, &quot;Args&quot;: []}&apos;</span>
+</pre><p>The last line is the most important one and is pretty straight-forward. If we just want to read the contents, it&#x2019;s much simpler.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer chaincode query -C channel1 -n basic -c <span class="token string">&apos;{&quot;Args&quot;:[&quot;GetAllAssets&quot;]}&apos;</span> <span class="token operator">|</span> jq 
+</pre><p>And we can also query a particular asset using the <code>ReadAsset</code> function, passing it the target asset name.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">peer chaincode query -C channel1 -n basic -c <span class="token string">&apos;{&quot;Args&quot;:[&quot;ReadAsset&quot;, &quot;asset6&quot;]}&apos;</span> <span class="token operator">|</span> jq 
+</pre><p>While you&#x2019;re doing this, you can open the docker logs in another console to see how stuff is going.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># Watch the past logs </span>
+docker-compose -f docker/docker-compose-test-net.yaml logs  <span class="token operator">|</span> <span class="token function">more</span> 
+
+<span class="token comment"># or put it on follow as a running log </span>
+docker-compose -f docker/docker-compose-test-net.yaml logs -f 
+</pre><p>Of course, this doesn&#x2019;&apos;t work in another console as we don&#x2019;t have the proper environment variables set. Let&#x2019;s see what needs to be done for that.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">bash</span>   <span class="token comment"># make sure it&apos;s bash </span>
+
+<span class="token comment"># head over to the proper working folder </span>
+<span class="token builtin class-name">cd</span> ~/fabric/fabric-samples/test-network 
+
+<span class="token comment"># set the environment variables </span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:~/fabric/fabric-samples/bin/
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">FABRIC_CFG_PATH</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/<span class="token punctuation">..</span>/config/
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORDERER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORG1_PEER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ORG2_PEER_CERTFILE</span><span class="token operator">=</span><span class="token environment constant">$PWD</span>/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+
+
+<span class="token builtin class-name">source</span> ./scripts/envVar.sh
+<span class="token comment"># Select which organization you&apos;re emulating </span>
+setGlobals  <span class="token number">1</span>   
+</pre><h2 class="mume-header" id="how-to-clean-everything">How to Clean Everything</h2>
+
+<p>Sometimes you might run into really problematic issues or just want to experiment with the setup from scratch. Since everything is running on top of docker, this is really easy. Run the following to remove EVERYTHING and start from scratch.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token comment"># See what stuff is avaialble </span>
+docker images -a 
+docker volume <span class="token function">ls</span> 
+
+<span class="token comment"># Remove ALL the docker containers (Not just for fabric, ALL!!)</span>
+docker <span class="token function">rm</span> -vf <span class="token variable"><span class="token variable">$(</span>docker <span class="token function">ps</span> -a -q<span class="token variable">)</span></span> 
+
+<span class="token comment"># .. and the images </span>
+docker rmi -f <span class="token variable"><span class="token variable">$(</span>docker images -a -q<span class="token variable">)</span></span> 
+
+<span class="token comment"># Volumes are not deleted by default </span>
+docker volume <span class="token function">ls</span> 
+
+<span class="token comment"># ... but we can get rid of those too </span>
+docker system prune -a --volumes 
+
+<span class="token comment"># Verify that everything is indeed gone </span>
+docker volume <span class="token function">ls</span> 
+docker images 
+docker container <span class="token function">ls</span> 
+
+<span class="token comment"># And just for final measure </span>
+docker system prune --all 
+
+
+<span class="token comment"># finally, get rid of the files as well. </span>
+<span class="token comment"># Make sure you copy your code before doing this (if any)   </span>
+<span class="token builtin class-name">cd</span> ~/fabric 
+<span class="token function">sudo</span> <span class="token function">rm</span> -rf fabric-samples
+</pre><h1 class="mume-header" id="accessing-the-chaincode-through-code">Accessing the Chaincode through Code</h1>
+
+<p>Of course, we don&#x2019;t want to use the CLI to do everything. We need to be able to do this through Node code.</p>
+<p>We will create a simple project for this based on the example provided in <code>fabric-samples/asset-transfer-basic/application-javascript</code>. However, we want to clean the code a bit so that it&#x2019;s easier to work with.</p>
+<p>Let&#x2019;s start by creating a node project in our <code>fabric</code> folder.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token builtin class-name">cd</span> ~/fabric/fabric-samples 
+mdkir asset-app 
+<span class="token builtin class-name">cd</span> asset-app 
+
+<span class="token comment"># initialize a node project </span>
+<span class="token function">npm</span> init 
+</pre><p>Install the required packages in this project.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> fabric-ca-client 
+<span class="token function">npm</span> <span class="token function">install</span> fabric-network 
+</pre><h2 class="mume-header" id="helper-functions">Helper Functions</h2>
+
+<p>We need to first create some helper function. First is a function to get the organization&#x2019;s configurations. Complete sources of these files are available in the resources. In this file, we wil only discuss</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">exports<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">buildCCPOrg1</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">const</span> ccpPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&apos;..&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;test-network&apos;</span><span class="token punctuation">,</span> 
+    <span class="token string">&apos;organizations&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;peerOrganizations&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;org1.example.com&apos;</span><span class="token punctuation">,</span> 
+    <span class="token string">&apos;connection-org1.json&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword">const</span> fileExists <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">existsSync</span><span class="token punctuation">(</span>ccpPath<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword control-flow">if</span><span class="token punctuation">(</span><span class="token operator">!</span>fileExists<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword control-flow">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;Cannot find: ${ccpPath}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> contents <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">readFileSync</span><span class="token punctuation">(</span>ccpPath<span class="token punctuation">,</span> <span class="token string">&apos;utf8&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword">const</span> ccp <span class="token operator">=</span> <span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">parse</span><span class="token punctuation">(</span>contents<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;Loaded network config from: ${ccpPath}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token keyword control-flow">return</span> ccp<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</pre><p>We then create a function for creating a wallet. This wallet will hold the keys and other crypto material used througout the code. The waller can store in-memory (for testing) or in a folder (which is what we will use).</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">exports<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">buildWallet</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token maybe-class-name">Wallets</span><span class="token punctuation">,</span> walletPath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">let</span> wallet<span class="token punctuation">;</span> 
+
+    <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>walletPath<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        wallet <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token maybe-class-name">Wallets</span><span class="token punctuation">.</span><span class="token method function property-access">newFileSystemWallet</span><span class="token punctuation">(</span>walletPath<span class="token punctuation">)</span><span class="token punctuation">;</span>     
+        <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;Built wallet from ${walletPath}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span> 
+        wallet <span class="token operator">=</span> <span class="token keyword control-flow">await</span> <span class="token maybe-class-name">Wallets</span><span class="token punctuation">.</span><span class="token method function property-access">newInMemoryWallet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;Build in-memory wallet&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow">return</span> wallet<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</pre><p>There&#x2019;s also a function to pretty-print javascript. This is straight-forward.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript">exports<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">prettyJSONString</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">inputString</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword control-flow">return</span> <span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">stringify</span><span class="token punctuation">(</span><span class="token known-class-name class-name">JSON</span><span class="token punctuation">.</span><span class="token method function property-access">parse</span><span class="token punctuation">(</span>inputString<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword null nil">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="performing-administrative-actions">Performing Administrative Actions</h2>
+
+<p>There are some functions that will set up the admins and users. Logic for this is in the <code>caActions.js</code>Let&#x2019;s take a look at those here.</p>
+<p>First function is to load the credentials used for performing actions.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">function</span> <span class="token function">buildCAClient</span><span class="token punctuation">(</span><span class="token parameter"><span class="token maybe-class-name">FabricCAServices</span><span class="token punctuation">,</span> ccp<span class="token punctuation">,</span> caHostName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">const</span> caInfo <span class="token operator">=</span> ccp<span class="token punctuation">.</span><span class="token method function property-access">certificateAuthorities</span><span class="token punctuation">(</span>caHostName<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword">const</span> caTLSCACerts <span class="token operator">=</span> caInfo<span class="token punctuation">.</span><span class="token property-access">tlsCACerts</span><span class="token punctuation">.</span><span class="token property-access">pem</span><span class="token punctuation">;</span> 
+    <span class="token keyword">const</span> caClient <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FabricCAServices</span><span class="token punctuation">(</span>caInfo<span class="token punctuation">.</span><span class="token property-access">url</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        trustedRoots<span class="token operator">:</span> caTLSCACerts<span class="token punctuation">,</span> verify<span class="token operator">:</span> <span class="token boolean">false</span> 
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> caInfo<span class="token punctuation">.</span><span class="token property-access">caName</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;Built a CA client named: ${caInfo.caName}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token keyword control-flow">return</span> caClient<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><p>This function will be called with the following information:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">let</span> ccp <span class="token operator">=</span> helper<span class="token punctuation">.</span><span class="token method function property-access">buildCCPOrg1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token keyword">const</span> caClient <span class="token operator">=</span> <span class="token function">buildCAClient</span><span class="token punctuation">(</span>
+                    <span class="token maybe-class-name">FabricCAServices</span><span class="token punctuation">,</span> 
+                    ccp<span class="token punctuation">,</span> 
+                    <span class="token string">&apos;ca.org1.example.com&apos;</span>
+                <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</pre><p>We also need to create an administrative account. This will be a onetime task. We first create the enrollment information along with its X.509 certificate. Then we put it in the wallet.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">enrollAdmin</span><span class="token punctuation">(</span><span class="token parameter">caClient<span class="token punctuation">,</span> wallet<span class="token punctuation">,</span> orgMspId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token comment">// ... </span>
+        
+        <span class="token keyword">const</span> enrollment <span class="token operator">=</span> <span class="token keyword control-flow">await</span> caClient<span class="token punctuation">.</span><span class="token method function property-access">enroll</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+            enrollmentID<span class="token operator">:</span> adminUserId<span class="token punctuation">,</span> 
+            enrollmentSecret<span class="token operator">:</span> adminUserPasswd
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+        <span class="token keyword">const</span> x509Identity <span class="token operator">=</span> <span class="token punctuation">{</span> 
+            credentials<span class="token operator">:</span> <span class="token punctuation">{</span>
+                certificate<span class="token operator">:</span> enrollment<span class="token punctuation">.</span><span class="token property-access">certificate</span><span class="token punctuation">,</span> 
+                privateKey<span class="token operator">:</span> enrollment<span class="token punctuation">.</span><span class="token property-access">key</span><span class="token punctuation">.</span><span class="token method function property-access">toBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+            mspId<span class="token operator">:</span> orgMspId<span class="token punctuation">,</span> 
+            type<span class="token operator">:</span> <span class="token string">&apos;X.509&apos;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+        <span class="token keyword control-flow">await</span> wallet<span class="token punctuation">.</span><span class="token method function property-access">put</span><span class="token punctuation">(</span>adminUserId<span class="token punctuation">,</span> x509Identity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// ... </span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><p>Creating an everyday user is similar but it&#x2019;s done more often. We load the admin credentials, use those to create the user and save the user&#x2019;s credentials in the wallet.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">registerAndEnrollUser</span><span class="token punctuation">(</span><span class="token parameter">caClient<span class="token punctuation">,</span> wallet<span class="token punctuation">,</span> orgMspId<span class="token punctuation">,</span> userId<span class="token punctuation">,</span> affiliation</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
+    <span class="token comment">// ... </span>
+
+    <span class="token comment">// Must use an admin to register a new user</span>
+    <span class="token keyword">const</span> adminIdentity <span class="token operator">=</span> <span class="token keyword control-flow">await</span> wallet<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span>adminUserId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// ... </span>
+
+    <span class="token comment">// build a user object for authenticating with the CA</span>
+    <span class="token keyword">const</span> provider <span class="token operator">=</span> wallet<span class="token punctuation">.</span><span class="token method function property-access">getProviderRegistry</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
+                        <span class="token method function property-access">getProvider</span><span class="token punctuation">(</span>adminIdentity<span class="token punctuation">.</span><span class="token property-access">type</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> adminUser <span class="token operator">=</span> <span class="token keyword control-flow">await</span> provider<span class="token punctuation">.</span><span class="token method function property-access">getUserContext</span><span class="token punctuation">(</span>adminIdentity<span class="token punctuation">,</span> adminUserId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">const</span> secret <span class="token operator">=</span> <span class="token keyword control-flow">await</span> caClient<span class="token punctuation">.</span><span class="token method function property-access">register</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                          affiliation<span class="token operator">:</span> affiliation<span class="token punctuation">,</span>
+                          enrollmentID<span class="token operator">:</span> userId<span class="token punctuation">,</span>
+                          role<span class="token operator">:</span> <span class="token string">&apos;client&apos;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> adminUser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> enrollment <span class="token operator">=</span> <span class="token keyword control-flow">await</span> caClient<span class="token punctuation">.</span><span class="token method function property-access">enroll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      enrollmentID<span class="token operator">:</span> userId<span class="token punctuation">,</span>
+      enrollmentSecret<span class="token operator">:</span> secret
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> x509Identity <span class="token operator">=</span> <span class="token punctuation">{</span>
+      credentials<span class="token operator">:</span> <span class="token punctuation">{</span>
+        certificate<span class="token operator">:</span> enrollment<span class="token punctuation">.</span><span class="token property-access">certificate</span><span class="token punctuation">,</span>
+        privateKey<span class="token operator">:</span> enrollment<span class="token punctuation">.</span><span class="token property-access">key</span><span class="token punctuation">.</span><span class="token method function property-access">toBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      mspId<span class="token operator">:</span> orgMspId<span class="token punctuation">,</span>
+      type<span class="token operator">:</span> <span class="token string">&apos;X.509&apos;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword control-flow">await</span> wallet<span class="token punctuation">.</span><span class="token method function property-access">put</span><span class="token punctuation">(</span>userId<span class="token punctuation">,</span> x509Identity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</pre><p>There are two more function <code>getAdmin</code> and <code>getUser</code> which are basically interfaces for the above two functions.</p>
+<p>Finally, we have some helper code so that we can call these functions from the command line.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">let</span> args <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token property-access">argv</span><span class="token punctuation">;</span> 
+
+<span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&apos;admin&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token function">getAdmin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span>args<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&apos;user&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token keyword">let</span> org1UserId <span class="token operator">=</span> args<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
+    <span class="token function">getUser</span><span class="token punctuation">(</span>org1UserId<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> <span class="token keyword control-flow">else</span> <span class="token punctuation">{</span> 
+    <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&quot;Invalid command&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><h2 class="mume-header" id="performing-actions-on-the-ledger-itself">Performing Actions on the Ledger Itself</h2>
+
+<p>Once we have the users and admins, we can perform the actual chaincode logic. Logic for this is in the <code>ledgerActions.js</code>.</p>
+<p>Relevant fragments of code are discussed here. First part is the connection information. Think of this as being similar to creating a database connection.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> ccp <span class="token operator">=</span> helper<span class="token punctuation">.</span><span class="token method function property-access">buildCCPOrg1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> wallet <span class="token operator">=</span> <span class="token keyword control-flow">await</span> helper<span class="token punctuation">.</span><span class="token method function property-access">buildWallet</span><span class="token punctuation">(</span><span class="token maybe-class-name">Wallets</span><span class="token punctuation">,</span> walletPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> gateway <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Gateway</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword control-flow">await</span> gateway<span class="token punctuation">.</span><span class="token method function property-access">connect</span><span class="token punctuation">(</span>ccp<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            wallet<span class="token punctuation">,</span>
+            identity<span class="token operator">:</span> org1UserId<span class="token punctuation">,</span>
+            discovery<span class="token operator">:</span> <span class="token punctuation">{</span> enabled<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> asLocalhost<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</pre><p>Then we establish the connection to the actual chaincode. Again, think of this as selecting a specific database from our connection.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">const</span> network <span class="token operator">=</span> <span class="token keyword control-flow">await</span> gateway<span class="token punctuation">.</span><span class="token method function property-access">getNetwork</span><span class="token punctuation">(</span>channelName<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// channel1 </span>
+<span class="token keyword">const</span> contract <span class="token operator">=</span> network<span class="token punctuation">.</span><span class="token method function property-access">getContract</span><span class="token punctuation">(</span>chaincodeName<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// basic</span>
+</pre><p>Using the actual chaincode functions is no extremely easy. Simply call the relevant function like so:</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword control-flow">await</span> contract<span class="token punctuation">.</span><span class="token method function property-access">submitTransaction</span><span class="token punctuation">(</span><span class="token string">&apos;InitLedger&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</pre><p>This function essentially calls the function in the chaincode. This can be seen as the <code>InitLedger</code> function in <code>fabric-samples/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js</code>.</p>
+<p>The only difference is that since we are using <code>subimtTransaction</code>, this will go to the orderer and the whole voting and consensus algorithm will work and the transaction will be added to the blockchain. From a programming perspective, all of this is hidden behind this one simple function call.</p>
+<p>(Note that this line has actually been commented out in the file since we have already initialized the ledger previously in our workflow here.)</p>
+<p>Very similarly, we have the <code>GetAllAssets</code> and <code>ReadAsset</code> functions.</p>
+<pre data-role="codeBlock" data-info="javascript" class="language-javascript"><span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword control-flow">await</span> contract<span class="token punctuation">.</span><span class="token method function property-access">evaluateTransaction</span><span class="token punctuation">(</span><span class="token string">&apos;GetAllAssets&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// ... </span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword control-flow">await</span> contract<span class="token punctuation">.</span><span class="token method function property-access">evaluateTransaction</span><span class="token punctuation">(</span><span class="token string">&apos;ReadAsset&apos;</span><span class="token punctuation">,</span> asset<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token comment">// ...</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword control-flow">await</span> contract<span class="token punctuation">.</span><span class="token method function property-access">submitTransaction</span><span class="token punctuation">(</span><span class="token string">&apos;CreateAsset&apos;</span><span class="token punctuation">,</span> 
+                                <span class="token string">&apos;asset101&apos;</span><span class="token punctuation">,</span> 
+                                <span class="token string">&apos;violet&apos;</span><span class="token punctuation">,</span> 
+                                <span class="token string">&apos;5&apos;</span><span class="token punctuation">,</span> 
+                                <span class="token string">&apos;Snnorre 3&apos;</span><span class="token punctuation">,</span> 
+                                <span class="token string">&apos;1300&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+</pre><p>The file also has some code fragments that allow passing comments into the code. So, we can call it using the following commands.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">node ledgerActions.js GetAllAssets 
+node ledgerActions.js ReadAsset asset1 
+node ledgerActions.js CreateAsset 
+</pre><p>Of course, you can add node code for exposing these calls through a REST API and call those REST APIs from your front-end such as React, Vue etc.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
